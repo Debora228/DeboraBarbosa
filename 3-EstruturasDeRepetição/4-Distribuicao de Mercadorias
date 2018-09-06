@@ -1,0 +1,36 @@
+n = int(input())
+somaC = 0
+somaP = 0
+
+for i in range (n):
+	peso = int(input())
+	tipo = int(input())
+	destino = int(input())
+	
+	if tipo == 0:
+		quant = int(peso / 10)
+		if peso % 10  ==0:
+			somaC = somaC + quant 
+		else:
+			quant = quant + 1
+			somaC = somaC + quant
+		somaP = somaP + quant*500
+		dias = destino / 100
+		if i == 0:
+			maxi = dias	
+		elif maxi < dias:
+			maxi = dias
+	else:
+		quant = int(peso / 5)
+		if peso % 5  ==0:
+			somaC = somaC + quant
+		else:
+			somaC = somaC + quant + 1
+		somaP = somaP + quant*1200
+		dias = destino / 250
+		if i == 0:
+			maxi = dias	
+		elif maxi < dias:
+			maxi = dias
+		
+print(somaC,somaP,int(maxi))
