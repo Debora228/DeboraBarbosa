@@ -1,0 +1,15 @@
+n = int(input())
+somad =0 
+
+for i in range(n):
+	d,t = map(int, input().split())
+	somad = somad + d
+	
+hp = int(input())
+vida = 100 + (hp * (t-1))
+estado = vida - somad
+
+if estado <= 0:
+	print("Inimigo Morto")
+else:
+	print("Inimigo Vivo")
