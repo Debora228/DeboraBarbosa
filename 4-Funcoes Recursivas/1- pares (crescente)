@@ -1,0 +1,15 @@
+n = int(input())
+
+def pares(num):
+    if num == 0:
+            print("0")
+            return num
+    else:
+        pares(num-1)
+        if (num%2==0):
+            print(num)
+
+
+pares(n)
+print("\n")
+
