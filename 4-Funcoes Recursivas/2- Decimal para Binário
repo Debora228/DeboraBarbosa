@@ -1,0 +1,13 @@
+def binario(num):
+    if num < 2:
+        print("1")
+        return 1
+    else:
+        binario(num//2)
+        print(num%2)
+
+num =int(input())
+if 0 == num:
+    print(0)
+else:
+    binario(num)
